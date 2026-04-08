@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Invalid Shortcode{% endblock %}
+
+{% block content %}
+<div class="py-5">
+    <div class="p-5 border border-dark bg-warning" style="border-width: 4px !important; box-shadow: 10px 10px 0px #212529;">
+        <h1 class="fw-bold text-uppercase">Unknown Shortcode</h1>
+        <p class="lead">The code <code class="bg-white px-2">{{ code }}</code> does not exist in our database.</p>
+        <hr class="border-dark">
+        <p>Would you like to create a mapping for this link or browse the directory?</p>
+
+        <div class="d-flex gap-3 mt-4">
+            <a href="{{ url_for('create_link') }}" class="btn btn-dark rounded-0 fw-bold">CREATE LINK</a>
+            <a href="{{ url_for('directory') }}" class="btn btn-outline-dark rounded-0 fw-bold">VIEW DIRECTORY</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

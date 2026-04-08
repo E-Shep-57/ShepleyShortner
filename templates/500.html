@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Server Error{% endblock %}
+
+{% block content %}
+<div class="py-5 text-center">
+    <h1 class="display-1 fw-bold text-danger">500</h1>
+    <h2 class="fw-bold text-uppercase">Something went wrong</h2>
+
+    <div class="p-4 border border-dark bg-white mx-auto my-4" style="border-width: 3px !important; box-shadow: 10px 10px 0px #212529; max-width: 600px;">
+        <p class="lead mb-0">
+            It's not you, it's us! The server encountered an internal error or misconfiguration
+            and was unable to complete your request. We shall investigate the server for moths and get back to you
+        </p>
+    </div>
+
+    <p class="text-muted mb-5">Please try again later.</p>
+
+    <div class="d-flex justify-content-center gap-3">
+        <a href="{{ url_for('index') }}" class="btn btn-dark rounded-0 fw-bold px-5">RETURN TO HOME</a>
+    </div>
+</div>
+{% endblock %}

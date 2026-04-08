@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Create Short Link{% endblock %}
+
+{% block content %}
+<h1 class="fw-bold text-uppercase mb-4">Link Shortener</h1>
+
+<div class="p-4 border border-dark bg-light" style="border-width: 3px !important; box-shadow: 8px 8px 0px #212529;">
+    <form method="POST">
+        <div class="mb-3">
+            <label for="url" class="form-label fw-bold">Paste your long URL here:</label>
+            <input type="url" name="url" class="form-control border-dark rounded-0" id="url" placeholder="https://example.com/very-long-link" required>
+        </div>
+        <button type="submit" class="btn btn-dark rounded-0 fw-bold px-4">GENERATE SHORTCODE</button>
+    </form>
+    <div class="mt-4">
+        Insert your link here, the link will be boiled and folded and turned into a handy short form for you to use at your convenience.
+    </div>
+</div>
+
+
+{% endblock %}

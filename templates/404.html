@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}404 - Page Not Found{% endblock %}
+
+{% block content %}
+<div class="text-center py-5">
+    <h1 class="display-1 fw-bold text-danger">404</h1>
+    <h2 class="fw-bold text-dark">Whoops! Page Lost in the Blocks.</h2>
+    <hr class="border-dark border-2 opacity-100 mx-auto" style="width: 50px;">
+
+    <p class="lead mb-4">
+        The page you are looking for doesn't exist or has been moved to another dimension.
+    </p>
+
+    <a href="{{ url_for('index') }}"
+       class="btn btn-dark btn-lg rounded-0 fw-bold px-4 shadow"
+       style="box-shadow: 6px 6px 0px #ffca28 !important;">
+       BACK TO HOME
+    </a>
+</div>
+{% endblock %}

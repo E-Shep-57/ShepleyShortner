@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Home - URL Shortener{% endblock %}
+
+{% block content %}
+<div class="py-5">
+    <h1 class="fw-bold text-uppercase mb-4" style="font-size: 3rem;">LinkShrink <span class="text-primary">v1.0</span></h1>
+
+    <div class="p-4 border border-dark bg-white mb-5" style="border-width: 4px !important; box-shadow: 10px 10px 0px #212529;">
+        <h3 class="fw-bold mb-3">What is this?</h3>
+        <p class="lead">
+            This application is a custom URL shortener that is similiar to Bit.ly and  is designed to transform long, messy web addresses
+            into clean, manageable shortcodes using a unique <strong>ASCII folding algorithm</strong>.
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="h-100 p-4 border border-dark bg-light" style="border-width: 3px !important; box-shadow: 6px 6px 0px #212529;">
+                <h4 class="fw-bold">1. Create</h4>
+                <p>Paste any fully-qualified URL. Our algorithm strips punctuation, converts to lowercase, and "folds" the ASCII values until the code is 8 characters or less.</p>
+                <a href="{{ url_for('create_link') }}" class="btn btn-dark rounded-0 fw-bold">START CREATING</a>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="h-100 p-4 border border-dark bg-light" style="border-width: 3px !important; box-shadow: 6px 6px 0px #212529;">
+                <h4 class="fw-bold">2. Redirect</h4>
+                <p>Once generated, your link is stored in our registry. Use the <code>/go/&lt;id&gt;</code> route to instantly redirect from Odin to your destination.</p>
+                <a href="{{ url_for('directory') }}" class="btn btn-outline-dark rounded-0 fw-bold">VIEW DIRECTORY</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
