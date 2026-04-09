@@ -77,12 +77,10 @@ def directory():
     return render_template('directory.html', links=links_data)
 @app.errorhandler(404)
 def page_not_found(e):
-    # This remains for global errors (like /random-address)
     return render_template('404.html'), 404
 
 @app.errorhandler(500)
 def internal_error(e):
-    # This catches logic crashes and file errors
     return render_template('500.html'), 500
 
 if __name__ == '__main__':
